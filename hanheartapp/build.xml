@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<project name="ts_hanheartapp" default="build" basedir=".">
+
+	<property name="shared.dir" location="${basedir}/../../../shared"/>
+	<import file="${shared.dir}/script/buildweb.xml"/>
+
+	<target name="init">
+		<webinit/>
+	</target>
+
+	<target name="clean">
+		<webclean/>
+	</target>
+
+	<target name="compile" depends="init" if="src.dir.present">
+		<webcompile/>
+	</target>
+
+	<target name="build" depends="compile">
+		<makejar/>
+	</target>
+
+	<target name="deploy" depends="build">
+ 		<webdeploy/>
+	</target>
+
+	<target name="copy" depends="build">
+		<webcopy/>
+	</target>
+
+</project>

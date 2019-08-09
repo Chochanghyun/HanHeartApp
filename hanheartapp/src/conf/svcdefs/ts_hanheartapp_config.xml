@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<services module="ts_hanheartapp" package="phis.nu.his.ts.hanheartapp">
+    <service name="SubmitInfo"
+             interface="${package}.submitinfo.SubmitInfo"
+             class="${package}.submitinfo.SubmitInfoImpl">
+        <property name="submitInfoMgt" ref="ts_hanheartmgr.SubmitInfoMgt" />
+    </service>
+    <service name="ScreenInfo"
+             interface="${package}.screeninfo.ScreenInfo"
+             class="${package}.screeninfo.ScreenInfoImpl">
+        <property name="screenInfoMgt" ref="ts_hanheartmgr.ScreenInfoMgt" />
+    </service>
+    <service name="UserInqr"
+             interface="${package}.userinqr.UserInqr"
+             class="${package}.userinqr.UserInqrImpl">
+        <property name="userInqrMgt" ref="ts_hanheartmgr.UserInqrMgt" />
+    </service>
+    <service name="MisuInfo"
+             interface="${package}.misuinfo.MisuInfo"
+             class="${package}.misuinfo.MisuInfoImpl">
+        <property name="misuInfoMgt" ref="ts_hanheartmgr.MisuInfoMgt" />
+    </service>
+    <service name="MaintInfo"
+             interface="${package}.maintinfo.MaintInfo"
+             class="${package}.maintinfo.MaintInfoImpl">
+        <property name="maintInfoMgt" ref="ts_hanheartmgr.MaintInfoMgt" />
+    </service>
+    <service name="MaintInqr"
+             interface="${package}.maintinqr.MaintInqr"
+             class="${package}.maintinqr.MaintInqrImpl">
+        <property name="maintInqrMgt" ref="ts_hanheartmgr.MaintInqrMgt" />
+    </service>
+</services>

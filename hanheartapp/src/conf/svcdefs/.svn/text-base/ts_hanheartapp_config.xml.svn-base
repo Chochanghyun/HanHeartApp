@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<services module="ts_hanheartapp" package="phis.nu.his.ts.hanheartapp">
+    <service name="SubmitInfo"
+             interface="${package}.submitinfo.SubmitInfo"
+             class="${package}.submitinfo.SubmitInfoImpl">
+        <property name="submitInfoMgt" ref="ts_hanheartmgr.SubmitInfoMgt" />
+    </service>
+</services>
